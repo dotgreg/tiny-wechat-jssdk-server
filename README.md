@@ -60,7 +60,7 @@
    > ```
 
 
-## API ENDPOINTS
+## API Endpoints
 
 1. getsignature
 
