@@ -38,8 +38,8 @@
    >     appid: 'wx56e08b08894f0d35',
    >     title: 'hello',
    >     desc: 'world',
-   >     link: 'http://preprod.website.31ten.cn', 
-   >     imgUrl: 'http://preprod.website.31ten.cn/static/img/wechat-sharing.png', // Absolute url only
+   >     link: 'http://mywebsite.cn', 
+   >     imgUrl: 'http://mywebsite.cn/static/img/wechat-sharing.png', // Absolute url only
    >     success: function // optional,
    >     cancel: function  // optional
    >   }
