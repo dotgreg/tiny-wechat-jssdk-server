@@ -52,11 +52,11 @@ the window.wxSharing can be setuped later, after the script loading and changed 
 
 1. getsignature
 
-    * Example: api/index.php?action=getsignature&appid=wx56e1111111111&appurl=http://preprod.tmall.31ten.cn&signuri=/test.html
-    * Description: get the signature necessary to use JSSDK on a page, Used automatically by script/wxSharing.js
+    * **Example**: `api/index.php?action=getsignature&appid=wx56e1111111111&appurl=http://mycompany.cn&signuri=/home.html`
+    * **Description**: Get the signature necessary to use JSSDK on a page, used internally by script/wxSharing.js
 
 2. clean 
 
-    * Example: api/index.php?action=clean&appid=wx56e1111111111&password=yourpasswordhere
-    * Description: Clean the JS token and JS ticket for the selected APPID, that next time 'getsignature' is called, it refreshs it
+    * **Example**: `api/index.php?action=clean&appid=wx56e1111111111&password=yourpasswordhere`
+    * **Description**: Clean the JS token and JS ticket for the selected APPID, that next time 'getsignature' is called, it refreshs it
 
