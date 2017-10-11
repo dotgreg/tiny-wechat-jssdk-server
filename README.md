@@ -7,7 +7,7 @@
     * have no dependancies, no database connection (working using json to store ticket/token)
     * be stupid simple to use, edit and upgrade, based on no framework, pure vanilla php and js
     * be a standalone microservice on a unique url for all your H5 and websites (ex http://api.wx.mycompany.cn) 
-* the frontend part contains a watcher that will do a call to the api if it detects the URI changed (for VueJS and other Frontend frameworks)
+* Frontend part contains a watcher that will do a call to the api if it detects the URI changed (for VueJS and other Frontend frameworks)
 
 ## Why
 
@@ -18,8 +18,8 @@
 ## Installation
 1. **Setup API Server**
    1. Make sure to whitelist your server IP inside Wechat Official Account backend
-   2. copy config.example.php to config.php
-   3. SECURE the keys folder that nobody outside your script can access it
+   2. Copy config.example.php to config.php
+   3. Secure the keys folder that nobody outside your script can access it
 
    > ```
    > on Nginx you can use :
@@ -31,7 +31,7 @@
 
 2. **On your Application/Website** 
    1. Make sure to whitelist your Domain name as JSSDK Allowed URL inside Wechat Official Account backend
-   2. add `<script src="http://api.wx.yourcompany.cn/script/wxSharing.js"></script>` in your frontend app (on vueJS, simply include it inside your index.html)
+   2. Add `<script src="http://api.wx.yourcompany.cn/script/wxSharing.js"></script>` in your frontend app (on vueJS, simply include it inside your index.html)
    3. Configure the object window.wxSharing in each of your page, working as well on Frontend frameworks using History.push (VueJS, Reach, Angular) as the script regularly checks the URL and call the API if any change
 
    > ```
@@ -47,9 +47,6 @@
    >     cancel: function  // optional
    >   }
    > ```
-
-### NOTE
-the window.wxSharing can be setuped later, after the script loading and changed dynamically on the pages, the script includes a watcher that will take the changes in account
 
 ## API ENDPOINTS
 
