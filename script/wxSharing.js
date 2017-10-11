@@ -39,13 +39,11 @@ function watchForUrlChange () {
   var oldURL = window.location.href
   var urlChecker = setInterval(function() {
     var newURL = window.location.href
-
     if (newURL !== oldURL) {
       getSignature (window.location.origin, window.location.pathname);
       oldURL = newURL;
       console.log('newURL changed to '+newURL+', renew wechat sharing infos');
     }
-
   }, 1000)
 }
 
@@ -92,9 +90,5 @@ function initShareOnWechat (wxparams) {
   }
 
   wx.onMenuShareAppMessage (shconfig);
-
-  // shconfig.desc = null;
   wx.onMenuShareTimeline (shconfig);
-
-  console.log(wx.config, shconfig)
 }
