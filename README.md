@@ -4,7 +4,7 @@
 
 * Simple API for wx JSSDK + its frontend js plugin for a lightning fast JSSDK functionnalities implementation
 * Designed to  
-    * have no dependancies, no database connection (working using json to store appid/secret)
+    * have no dependancies, no database connection (working using json to store ticket/token)
     * be stupid simple to use, edit and upgrade, based on no framework, pure vanilla php and js
     * be a standalone microservice on a unique url for all your H5 and websites (ex http://api.wx.mycompany.cn) 
 * the frontend part contains a watcher that will do a call to the api if it detects the URI changed (for VueJS and other Frontend frameworks)
