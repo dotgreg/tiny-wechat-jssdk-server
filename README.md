@@ -8,9 +8,9 @@
     * Be used as a tool for **rapid prototyping** on wechat JSSDK, **small websites and H5** quick solution
     * Have **no dependencies**, no database connection (working using json to store ticket/token)
     * Be **stupid simple to use**, edit and upgrade, based on no framework, pure vanilla php and js
-    * Be a standalone microservice api (ex http://api.wx.mycompany.cn) **work with several APPIDs**, **use a unique api for all your H5 and websites**    
+    * Be a standalone microservice api (ex https://api.wx.mycompany.cn) **work with several APPIDs**, **use a unique api for all your H5 and websites**    
     * Be **Frontend Framework-friendly** (VueJS, React, Angular) as the Javascript wxSharing.js includes a **watcher** that will update the signature if a URI change is detected
-    * **Easen the task of JSSDK debugging**, especially on workflows requiring compilation before reaching the server production (Webpack or MeteorJS), as the JSSDK script is easily editable on http://api.wx.mycompany.cn/script/wxSharing.js
+    * **Easen the task of JSSDK debugging**, especially on workflows requiring compilation before reaching the server production (Webpack or MeteorJS), as the js script can be embedded as external js ressource from your app on https://api.wx.mycompany.cn/script/wxSharing.js, thus easily editable (same design than the https://www.google-analytics.com/analytics.js embed)
 
 ## Why
 
