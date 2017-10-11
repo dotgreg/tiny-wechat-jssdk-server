@@ -18,10 +18,15 @@
 * Using this system, you can setup once and for all your websites and H5 an API system, the only thing needed is adding the wxSharing.js on your pages.
 
 ## Installation
-1. **Setup API Server**
+
+### Setup API Server
+
    1. Make sure to whitelist your server IP inside Wechat Official Account backend
+   
    2. Copy config.example.php to config.php
+   
    3. Secure the keys folder that nobody outside your script can access it
+   
 
    > ```
    > on Nginx you can use :
@@ -31,10 +36,14 @@
    > ```
    
 
-2. **On your Application/Website** 
+### On your Application/Website 
+
    1. Make sure to whitelist your Domain name as JSSDK Allowed URL inside Wechat Official Account backend
+   
    2. Add `<script src="https://api.wx.yourcompany.cn/script/wxSharing.js"></script>` in your frontend app (on vueJS/React/Angular, simply include it inside your root index.html)
+   
    3. Configure the object window.wxSharing in each of your page, working as well on Frontend frameworks using History.push (VueJS, Reach, Angular) as the script regularly checks the URL and call the API if any change
+   
 
    > ```
    > window.wxSharing = {
@@ -49,6 +58,7 @@
    >     cancel: function  // optional
    >   }
    > ```
+
 
 ## API ENDPOINTS
 
