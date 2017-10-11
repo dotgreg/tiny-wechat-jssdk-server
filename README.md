@@ -32,7 +32,7 @@
 2. **On your Application/Website** 
    1. Make sure to whitelist your Domain name as JSSDK Allowed URL inside Wechat Official Account backend
    2. add `<script src="http://api.wx.yourcompany.cn/script/wxSharing.js"></script>` in your frontend app (on vueJS, simply include it inside your index.html)
-   3. call in your pages
+   3. Configure the object window.wxSharing in each of your page, working as well on Frontend frameworks using History.push (VueJS, Reach, Angular) as the script regularly checks the URL and call the API if any change
 
    > ```
    > window.wxSharing = {
