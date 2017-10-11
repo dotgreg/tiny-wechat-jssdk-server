@@ -8,7 +8,7 @@
     * Be used as a tool for **rapid prototyping** on wechat JSSDK, **small websites and H5** quick solution
     * Have **no dependencies**, no database connection (working using json to store ticket/token)
     * Be **stupid simple to use**, edit and upgrade, based on no framework, pure vanilla php and js
-    * Be a standalone microservice, **use a unique api for all your H5 and websites** (ex http://api.wx.mycompany.cn)    
+    * Be a standalone microservice api (ex http://api.wx.mycompany.cn) **work with several APPIDs**, **use a unique api for all your H5 and websites**    
     
 * Frontend part contains a **watcher** that will update the signature if a URI change is detected (for VueJS, React, Angular and other Frontend frameworks)
 
@@ -23,9 +23,9 @@
 
    1. Make sure to whitelist your server IP inside Wechat Official Account backend
    
-   2. Copy config.example.php to config.php
+   2. Edit your config by copying config.example.php to config.php
    
-   3. Secure the keys folder that nobody outside your script can access it
+   3. Secure the `keys` folder that nobody outside your script can access it, it will contain the Tokens and Tickets
    
 
    > ```
