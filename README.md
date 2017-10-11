@@ -16,33 +16,34 @@
 * It is also compatible with VueJS, Angular and React with its watcher that detect URL changes.
 
 ## Installation
+1. **Setup API Server**
+   1. copy config.example.php to config.php
+   2. SECURE the keys file that nobody outside your script can access it
 
-1. copy config.example.php to config.php
-2. SECURE the keys file that nobody outside your script can access it
+   > ```
+   > on Nginx you can use :
+   > location /keys {
+   >  deny all;
+   > }
+   > ```
 
-> ```
-> on Nginx you can use :
-> location /keys {
->  deny all;
-> }
-> ```
+2. **On your Application/Website** 
+   1. add `<script src="http://api.wx.yourcompany.cn/script/wxSharing.js"></script>` in your frontend app (on vueJS, simply include it inside your index.html)
+   2. call in your pages
 
-3. add `<script src="http://api.wx.yourcompany.cn/script/wxSharing.js"></script>` in your frontend app (on vueJS, simply include it inside your index.html)
-4. call in your pages
-
-> ```
-> window.wxSharing = {
->     debug: true,
->     apiUrl: 'http://api.wx.yourcompany.cn',
->     appid: 'wx56e08b08894f0d35',
->     title: 'hello',
->     desc: 'world',
->     link: 'http://preprod.website.31ten.cn', 
->     imgUrl: 'http://preprod.website.31ten.cn/static/img/wechat-sharing.png', // Absolute url only
->     success: function // optional,
->     cancel: function  // optional
->   }
-> ```
+   > ```
+   > window.wxSharing = {
+   >     debug: true,
+   >     apiUrl: 'http://api.wx.yourcompany.cn',
+   >     appid: 'wx56e08b08894f0d35',
+   >     title: 'hello',
+   >     desc: 'world',
+   >     link: 'http://preprod.website.31ten.cn', 
+   >     imgUrl: 'http://preprod.website.31ten.cn/static/img/wechat-sharing.png', // Absolute url only
+   >     success: function // optional,
+   >     cancel: function  // optional
+   >   }
+   > ```
 
 ### NOTE
 the window.wxSharing can be setuped later, after the script loading and changed dynamically on the pages, the script includes a watcher that will take the changes in account
