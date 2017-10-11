@@ -1,4 +1,4 @@
-# Minimalistic Wechat JSSDK API server + its Frontend script
+# Tiny Wechat JSSDK API server + its frontend script
 
 ## Description
 
