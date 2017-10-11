@@ -17,8 +17,9 @@
 
 ## Installation
 1. **Setup API Server**
-   1. copy config.example.php to config.php
-   2. SECURE the keys folder that nobody outside your script can access it
+   1. Make sure to whitelist your server IP inside Wechat Official Account backend
+   2. copy config.example.php to config.php
+   3. SECURE the keys folder that nobody outside your script can access it
 
    > ```
    > on Nginx you can use :
@@ -26,10 +27,12 @@
    >  deny all;
    > }
    > ```
+   
 
 2. **On your Application/Website** 
-   1. add `<script src="http://api.wx.yourcompany.cn/script/wxSharing.js"></script>` in your frontend app (on vueJS, simply include it inside your index.html)
-   2. call in your pages
+   1. Make sure to whitelist your Domain name as JSSDK Allowed URL inside Wechat Official Account backend
+   2. add `<script src="http://api.wx.yourcompany.cn/script/wxSharing.js"></script>` in your frontend app (on vueJS, simply include it inside your index.html)
+   3. call in your pages
 
    > ```
    > window.wxSharing = {
