@@ -31,18 +31,18 @@
 
 2. **On your Application/Website** 
    1. Make sure to whitelist your Domain name as JSSDK Allowed URL inside Wechat Official Account backend
-   2. Add `<script src="http://api.wx.yourcompany.cn/script/wxSharing.js"></script>` in your frontend app (on vueJS, simply include it inside your index.html)
+   2. Add `<script src="https://api.wx.yourcompany.cn/script/wxSharing.js"></script>` in your frontend app (on vueJS, simply include it inside your index.html)
    3. Configure the object window.wxSharing in each of your page, working as well on Frontend frameworks using History.push (VueJS, Reach, Angular) as the script regularly checks the URL and call the API if any change
 
    > ```
    > window.wxSharing = {
    >     debug: true,
-   >     apiUrl: 'http://api.wx.yourcompany.cn',
+   >     apiUrl: 'https://api.wx.yourcompany.cn',
    >     appid: 'wx56e08b08894f0d35',
    >     title: 'hello',
    >     desc: 'world',
-   >     link: 'http://mywebsite.cn', 
-   >     imgUrl: 'http://mywebsite.cn/static/img/wechat-sharing.png', // Absolute url only
+   >     link: 'https://mywebsite.cn', 
+   >     imgUrl: 'https://mywebsite.cn/static/img/wechat-sharing.png', // Absolute url only
    >     success: function // optional,
    >     cancel: function  // optional
    >   }
@@ -52,7 +52,7 @@
 
 1. getsignature
 
-    * **Example**: `api/index.php?action=getsignature&appid=wx56e1111111111&appurl=http://mycompany.cn&signuri=/home.html`
+    * **Example**: `api/index.php?action=getsignature&appid=wx56e1111111111&appurl=https://mycompany.cn&signuri=/home.html`
     * **Description**: Get the signature necessary to use JSSDK on a page, used internally by script/wxSharing.js
 
 2. clean 
