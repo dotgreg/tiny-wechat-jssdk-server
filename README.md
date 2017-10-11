@@ -15,6 +15,7 @@
 ## Why
 
 * Wechat JSSDK API implementation on websites and H5 **is a pain**, requiring backend, storage and frontend logic.
+* **Debugging wechat JSSDK is even more a nightmare, as it usually requires you to debug your js code on the production server** (as it only works on whitelisted domains). Adding it to some workflows **where compiling is required before deployment (like Webpack or MeteorJS)**, the task could easily takes hours, thus **editing the JS script on a third party server you have total control on it** solves a lot of issues.
 * Using this system, you can setup once and for all your websites and H5 an API system, the only thing needed is adding the wxSharing.js on your pages.
 
 ## Installation
