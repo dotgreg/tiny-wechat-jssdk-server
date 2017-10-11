@@ -6,17 +6,16 @@
 
 * Designed to :
     * Be used as a tool for **rapid prototyping** on wechat JSSDK, **small websites and H5** quick solution
-    * Have **no dependancies**, no database connection (working using json to store ticket/token)
+    * Have **no dependencies**, no database connection (working using json to store ticket/token)
     * Be **stupid simple to use**, edit and upgrade, based on no framework, pure vanilla php and js
     * Be a standalone microservice, **use a unique api for all your H5 and websites** (ex http://api.wx.mycompany.cn)    
     
-* Frontend part contains a watcher that will do a call to the api if it detects the URI changed (for VueJS and other Frontend frameworks)
+* Frontend part contains a **watcher** that will update the signature if a URI change is detected (for VueJS, React, Angular and other Frontend frameworks)
 
 ## Why
 
-* Wechat JSSDK API implementation on websites and H5 is a pain, requiring backend, storage and frontend logic.
+* Wechat JSSDK API implementation on websites and H5 **is a pain**, requiring backend, storage and frontend logic.
 * Using this system, you can setup once and for all your websites and H5 an API system, the only thing needed is adding the wxSharing.js on your pages.
-* It is also compatible with VueJS, Angular and React with its watcher that detect URL changes.
 
 ## Installation
 1. **Setup API Server**
@@ -34,7 +33,7 @@
 
 2. **On your Application/Website** 
    1. Make sure to whitelist your Domain name as JSSDK Allowed URL inside Wechat Official Account backend
-   2. Add `<script src="https://api.wx.yourcompany.cn/script/wxSharing.js"></script>` in your frontend app (on vueJS, simply include it inside your index.html)
+   2. Add `<script src="https://api.wx.yourcompany.cn/script/wxSharing.js"></script>` in your frontend app (on vueJS/React/Angular, simply include it inside your root index.html)
    3. Configure the object window.wxSharing in each of your page, working as well on Frontend frameworks using History.push (VueJS, Reach, Angular) as the script regularly checks the URL and call the API if any change
 
    > ```
