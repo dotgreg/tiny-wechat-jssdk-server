@@ -52,7 +52,6 @@ function getSignature (originUrl, pathnameUrl) {
 
   var oReq = new XMLHttpRequest();
   oReq.onload = function(e) {
-    console.log(e.target.response);
     setTimeout(function(){
       initShareOnWechat(e.target.response.content)
     }.bind(e), 1000)
