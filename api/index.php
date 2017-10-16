@@ -25,6 +25,12 @@ switch ($_GET['action']) {
 
     $jssdk = new JSSDK($appConfig['appid'], $appConfig['appsecret']);
     $signedUri = $jssdk->getSignPackage($_GET['appurl'], $_GET['signuri']);
+    
+    // $logger = fopen("../logs.txt", "a") or die("Unable to open file!");
+    // $txt = time() . ' --> '. $_SERVER['HTTP_USER_AGENT']. ' --> '.json_encode(answer_content($signedUri)).'\r\n'.PHP_EOL.'\r\n'.PHP_EOL;
+    // fwrite($logger, "\n". $txt);
+    // fclose($logger);
+    
     return send(answer_content($signedUri));
   break;
 
